@@ -16,9 +16,7 @@ function SignUpData(e){
         localStorage.setItem("SignUp-Data" , JSON.stringify(signUpArr));
         window.location.href = "data.html";
     }
-    else if(SignIn.password.length < 5){
-        alert("Password Length Should Be Greater Than 5")
-    }else{
+    else{
         alert("Email Already Exists")
     }
 }    

@@ -3,12 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
+body {
     background-image: url("Background2.png");
+    background-image: url("://media.istockphoto.com/photos/fashion-store-abstract-defocused-blurrhttpsed-background-picture-id494315646?k=20&m=494315646&s=612x612&w=0&h=g6GJ0wkS2xXvgyzG22LpHY1CmHqNnXdLXkoD370Fnj4=");
     background-repeat: no-repeat;
+    /* filter: brightness(50%); */
     background-size: 1620px;
-    /* background: rgb(90,120,128); */
-    /* background: linear-gradient(90deg, rgba(90,120,128,1) 0%, rgba(94,151,154,1) 0%, rgba(113,132,198,1) 100%, rgba(152,56,190,1) 100%, rgba(70,45,45,1) 100%, rgba(108,170,231,1) 100%); */
+    /* background: rgb(90,120,128);
+    background: linear-gradient(90deg, rgba(90,120,128,1) 0%, rgba(94,151,154,1) 0%, rgba(113,132,198,1) 100%, rgba(152,56,190,1) 100%, rgba(70,45,45,1) 100%, rgba(108,170,231,1) 100%); */
 }
 #container{
     display: flex;
@@ -89,7 +91,7 @@ form>input:last-child{
     font-family: 'Lato', sans-serif;
     font-size: 16px;
 }
-#horizontal{
+/* #horizontal{
     display: flex;
     margin-top: 25px;
     margin-left: 100px;
@@ -104,7 +106,7 @@ form>input:last-child{
     width: 100px;
     height: 0px;
     margin-left: 25px;
-}
+} */
 #or{
     /* position: absolute;
     /* top: 404px; */
@@ -149,6 +151,44 @@ p+hr{
 #button:hover{
     cursor: pointer;
     /* background-color: rgb(80, 32, 32); */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width :1100px) {
+    body {
+        background: rgb(90, 120, 128);
+        background: linear-gradient(90deg, rgba(90, 120, 128, 1) 0%, rgba(94, 151, 154, 1) 0%, rgba(113, 132, 198, 1) 100%, rgba(152, 56, 190, 1) 100%, rgba(70, 45, 45, 1) 100%, rgba(108, 170, 231, 1) 100%);
+    }
+
+    #container {
+        display: block;
+        margin: auto;
+        margin-left: 6px;
+    }
+
+    #imgbox {
+        width: 100%;
+    }
+
+    #loginbox {
+        width: 100%;
+    }
+
+    p+hr {
+        margin-left: 380px;
+    }
 }
 
 

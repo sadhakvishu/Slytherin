@@ -97,14 +97,19 @@ function DisplayCart(cart){
         cbtninc.addEventListener("click", function(){
             count1++;
             count.innerText = "Qty :" + " " + count1;
-            totalPrice += e.rate*count1
+            totalPrice += e.rate*count1;
         })
         let cbtninc2 = document.createElement("button");
         cbtninc2.id = "dec";
         cbtninc2.innerText = "-"
         cbtninc2.addEventListener("click", function(){
             count1--;
+            if(count1<0){
+                alert("Already Zero Qty");
+            }
+            else{
             count.innerText = "Qty :" + " " + count1;
+            }
 
         })
         let box2 = document.createElement("div");
@@ -142,34 +147,6 @@ function DisplayCart(cart){
             }
         })    
 }
-
-
-// let count =[]
-// document.querySelector("#inc").addEventListener("click" , func1);
-
-// function func1(){
-//     count++;
-//     document.querySelector("#count").innerText = count
-//     localStorage.setItem("counter" , count);
-// }
-// document.querySelector("#dec").addEventListener("click" , func2);
-// function func2(){
-//     count--;
-//     if(count<0){
-//         alert("Already Quantity Is Zero")
-//     }
-//     else{
-//         document.querySelector("#count").innerText = count
-//         localStorage.setItem("counter" , count);
-//     }
-// }
-
-
-
-
-
-
-
 function del(index){
     cart.splice(index,1);
     localStorage.setItem("cartdata", JSON.stringify(cart));  

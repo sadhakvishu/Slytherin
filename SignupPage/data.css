@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url("Background2.png");
+    background-image: url("Background20.png");
     background-repeat: no-repeat;
     background-size: 1620px;
     /* background-color: red; */
@@ -160,4 +160,44 @@ p+hr{
     margin-top: 10px;
     width: 300px;
     height: 43px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width :1100px) {
+    body {
+        background: rgb(90, 120, 128);
+        background: linear-gradient(90deg, rgba(90, 120, 128, 1) 0%, rgba(94, 151, 154, 1) 0%, rgba(113, 132, 198, 1) 100%, rgba(152, 56, 190, 1) 100%, rgba(70, 45, 45, 1) 100%, rgba(108, 170, 231, 1) 100%);
+    }
+
+    #container {
+        display: block;
+        margin: auto;
+    }
+
+    #imgbox {
+        width: 100%;
+    }
+
+    #loginbox {
+        width: 100%;
+    }
+
+    p+hr {
+        margin-left: 380px;
+    }
 }
