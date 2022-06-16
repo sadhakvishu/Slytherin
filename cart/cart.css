@@ -1,16 +1,9 @@
 #main{
     width: 1550px;
-    /* border: 1px solid red; */
-    /* margin: auto; */
-    /* display: grid; */
-    /* grid-template-columns: repeat(2,888px); */
-    /* grid-template-rows: auto; */
     gap: 5px;
 }
 #main>div{
     height: 220px;
-    /* border: 2px solid green; */
-    /* text-align: center; */
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border: 1px solid rgb(207, 205, 205);
     border-radius: 8px;
@@ -21,14 +14,12 @@
 }
 #main>div>div:first-child{
     width: 400px;
-    /* border: 1px solid red; */
     margin-left: 20px;
 }
 #main>div>div:last-child{
     width: 300px;
     height: 200px;
     margin-top: 8px;
-    /* border: 1px solid rgb(216, 216, 216); */
     margin-right: 10px;
 }
 #main>div>div>img{
@@ -70,8 +61,6 @@ button:hover{
     color: white;
 }
 #new{
-    /* border: 1px solid red; */
-    /* display: flex; */
     width: 700px;
     height: 100vh;
     margin-right: 10px;
@@ -214,19 +203,6 @@ button:hover{
 #dec:hover{
     background-color: rgb(0, 0, 0);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media all and (max-width :1120px){
     #container{
         display: block;
@@ -235,4 +211,14 @@ button:hover{
         margin-left: 500px;
         margin-top: 30px;
     }
+}
+
+#empty-cart{
+    width: 300px;
+    margin: auto;
+}
+#empty-cart>h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin-left: 50px;
 }

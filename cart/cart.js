@@ -73,8 +73,18 @@
 
 let cart = JSON.parse(localStorage.getItem("cartdata")) || [];
 
+if(cart.length==0){
+    let empty = document.createElement("div")
+    empty.id = "empty-cart"
+    let text = document.createElement("h2");
+    text.innerText = "Cart Is Empty"
+    empty.append(text);
+    document.querySelector("#main").append(empty)
+}else{
+    DisplayCart(cart);
+}
 
-DisplayCart(cart);
+
 
 function DisplayCart(cart){    
     let totalPrice = 0;
