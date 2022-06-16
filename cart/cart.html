@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <title>Cart</title>
+</head>
+<body>
+    <div id="container">
+        <div id="main">
+
+        </div>
+        <div id="new">
+            <div id="yellow">
+                <h4>Save Extra $50 From TriBe</h4>
+            </div>
+            <div>
+                <h5>Whistles! Get extra 10% Cashback on prepaid orders above Rs.699. Coupon code - OOF10.</h5>
+            </div>
+            <div>
+                <h5>Get upto Rs.200 cashback on orders above Rs.299 on Paytm Wallet and Paytm Postpaid.</h5>
+            </div>
+            <div>
+                <h5>Whistles! Get extra 20% Cashback on prepaid orders above Rs.499. Coupon code - NEW20. Applicable for new customers only!</h5>
+            </div>
+            <input type="text" id="coupon" placeholder="Apply Coupon / Referal Code"><br/>
+            <button id="apply">Apply</button>
+            <div class="price">
+                <div>
+                    <h5>Price Summary</h5>
+                </div>
+                <div id="price-summary">
+                    <div>
+                        <p>Total MRP (Incl Of All Taxes)</p>
+                    </div>
+                    <div id="price-value">
+                        <p>0</p>
+                    </div>                                        
+                </div>
+                <div id="price-summary">
+                    <div class="margin">
+                        <p>Delivery Fee</p>
+                    </div>
+                    <div id="price-value">
+                        <p>109</p>
+                    </div>                                        
+                </div>
+                <div id="price-summary">
+                    <div class="margin">
+                        <p>Bag Discount</p>
+                    </div>
+                    <div id="price-value">
+                        <p id="coupval">No Coupon Applied</p>
+                    </div>                                        
+                </div>
+                <div id="price-summary">
+                    <div class="margin">
+                        <p>SubTotal</p>
+                    </div>
+                    <div id="price-value">
+                        <p id="subtotal"></p>
+                    </div>                                        
+                </div>
+                <button id="Place-order">Place Order</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="cart.js"></script>

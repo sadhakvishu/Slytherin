@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let data =[
+        {name:"arun" , count : 1},
+        {name:"arun" , count : 1},
+        {name:"arun" , count : 1},
+        {name:"arun" , count : 1},
+        {name:"arun" , count : 1},
+        {name:"arun" , count : 1},
+        {name:"arun" , count : 1},
+    ]
+
+    data.forEach(function(e){
+        let box = document.createElement("div");
+        let name = document.createElement("h2");
+        name.innerText = e.name;
+        let count = document.createElement("h3");
+        count.innerText = e.count;
+        let btn = document.createElement("button")
+        btn.innerText = "inc"
+        btn.addEventListener("click" , function(){
+            func1(e.count)
+        })
+        box.append(name,count,btn)
+        document.querySelector("body").append(box)
+
+    })
+
+
+    function func1(count){
+        count++;
+        console.log(count)
+    }
+</script>
