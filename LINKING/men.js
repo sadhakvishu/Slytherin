@@ -1,9 +1,9 @@
-let img = document.querySelector("img")
+let img = document.querySelector("#crausal img")
 // console.log(img)
 
 let imgNum = 0;
 let imgArray = [
-    "https://cdn.modesens.com/banner/20220613-modesens-SummerFashionGuide-1140x400-EN.jpg",
+    "https://modesens.com/banner/12490/getimg/?img=%2Fbanner%2F20220616-modesens-SlamJam-1140x400-EN.jpg",
     "https://cdn.modesens.com/banner/20220612-modesens-TheSportsEdit-1140x400-EN.jpg",
     "https://cdn.modesens.com/banner/20220614-modesens-Monnalisa-1140x400-EN.jpg",
     "https://cdn.modesens.com/banner/20220613-modesens-AERYNE-1140x400-EN.jpg",
@@ -55,9 +55,9 @@ let p2 = para[1];
 let p3 = para[2]
 
 let imgArray2 = [
-    { link: "https://cdn.modesens.com/banner/20220612-modesens-Gucci-364x484.jpg", head: "GUCCI", para: "Father's Day Gifts" },
-    { link: "https://cdn.modesens.com/banner/20220531-modesens-Farfetch-364x484.jpg", head: "Safe is here", para: "Enjoy uo to 50%" },
-    { link: "https://cdn.modesens.com/banner/20220615Designer-Collab-modesens364x484-F.jpg", head: "Our Kind Of Dream Team", para: "Collaboration is SO in Fashion" },
+    { link: "https://cdn.modesens.com/banner/20220602-modesens-LuisaViaRoma-364x484-M.jpg", head: "GUCCI", para: "Father's Day Gifts" },
+    { link: "https://cdn.modesens.com/banner/20220615Designer-Collab-modesens364x484-M.jpg", head: "Safe is here", para: "Enjoy uo to 50%" },
+    { link: "https://cdn.modesens.com/banner/20220616-modesens-Neutrals-364x484-M.jpg", head: "Our Kind Of Dream Team", para: "Collaboration is SO in Fashion" },
     { link: "https://cdn.modesens.com/banner/20220531-modesens-Sale-364x484.jpg", head: "New To Sale", para: "Fresh Cut" },
     { link: "https://cdn.modesens.com/banner/20220615-modesens-SummerFashionGuide-364x484.jpg", head: "ModeSens Fasion Guide", para: "2022 Summer Trends" },
     { link: "https://cdn.modesens.com/banner/20220609-modesens-FPillowBags-364x484-F.jpg", head: "Relieve That Slumber Party Fun", para: "Discover a pillow bag for everyday wear" },
@@ -187,10 +187,10 @@ console.log(para3.length)
 
 let imgNum3 = 0;
 let imgArray3 = [
-    { link: "https://cdn.modesens.com/product/7298931_66?w=400&", head: "first", para: "one" },
-    { link: "https://cdn-images.farfetch-contents.com/17/78/37/20/17783720_39317799_1000.jpg", head: "second", para: "two" },
-    { link: "https://cdn.modesens.com/product/41449769_2?w=400&", head: "third", para: "three" },
-    { link: "https://res.cloudinary.com/ssenseweb/image/upload/b_white%2Cc_lpad%2Cg_center%2Ch_960%2Cw_960/c_scale%2Ch_680/f_auto%2Cdpr_1.0/212144F109000_1.jpg", head: "fourth", para: "four" },
+    { link: "https://cdn.modesens.com/availability/48974218?w=400&", head: "first", para: "one" },
+    { link: "https://cdn.modesens.com/product/18523816_154?w=400&", head: "second", para: "two" },
+    { link: "https://img.ssensemedia.com/images/221476M192000_1/purple-water-sky-shirt.jpg", head: "third", para: "three" },
+    { link: "https://cdn.modesens.com/availability/48268810?w=400&", head: "fourth", para: "four" },
     { link: "https://cdn.modesens.com/product/40615641_2?w=400&", head: "fifth", para: "five" },
     { link: "https://cdn.modesens.com/availability/48383362?w=400&", head: "sixth", para: "six" },
     { link: "https://cdn.modesens.com/availability/37731631?w=400&", head: "seventh", para: "seven" },
@@ -357,10 +357,10 @@ let rvh4 = head4[3];
 
 let imgNum4 = 0;
 let imgArray4 = [
-    { link: "https://cdn-images.farfetch-contents.com/18/25/72/72/18257272_38992881_1000.jpg", head: "first", para: "one" },
-    { link: "https://res.cloudinary.com/ssenseweb/image/upload/b_white%2Cc_lpad%2Cg_center%2Ch_960%2Cw_960/c_scale%2Ch_680/f_auto%2Cdpr_1.0/212144F109000_1.jpg", head: "second", para: "two" },
-    { link: "https://cdn.modesens.com/availability/48383362?w=400&", head: "third", para: "three" },
-    { link: "https://cdn.modesens.com/product/41449769_2?w=400&", head: "fourth", para: "four" },
+    { link: "https://img.ssensemedia.com/images/221476M192000_1/purple-water-sky-shirt.jpg", head: "first", para: "one" },
+    { link: "https://res.cloudinary.com/ssenseweb/image/upload/b_white%2Cc_lpad%2Cg_center%2Ch_960%2Cw_960/c_scale%2Ch_680/f_auto%2Cdpr_1.0/221404M193006_1.jpg", head: "second", para: "two" },
+    { link: "https://cdn.modesens.com/availability/48771117?w=400&", head: "third", para: "three" },
+    { link: "https://cdn.modesens.com/availability/47117075?w=400&", head: "fourth", para: "four" },
     { link: "https://cdn.modesens.com/product/40615641_2?w=400&", head: "fifth", para: "five" },
     { link: "https://cdn.modesens.com/availability/48383362?w=400&", head: "sixth", para: "six" },
     { link: "https://cdn.modesens.com/availability/37731631?w=400&", head: "seventh", para: "seven" },

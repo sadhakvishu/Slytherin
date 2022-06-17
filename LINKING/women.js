@@ -1,4 +1,4 @@
-let img = document.querySelector("img")
+let img = document.querySelector("#crausal img")
 // console.log(img)
 
 let imgNum = 0;

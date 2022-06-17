@@ -1,0 +1,215 @@
+.footer *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.footer{
+    width:95%;
+    margin: auto;
+    padding: 50px 0px;
+    position: relative;
+    bottom: 0;
+}
+.container{
+    border-top: 1px solid black;
+    max-width: 100%;
+    margin: auto;
+    padding: 40px 0px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.row2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.row2>div:first-child{
+    display: flex;
+    align-items: center;
+}
+.footer-col{
+    width: 20%;
+    padding: 0px 15px;
+}
+.footer-col img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.footer-col li a{
+    display: flex;
+    align-items: center;
+}
+
+.footer-col h4{
+    font-size: 19px;
+    color: #1C1C1C;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+.footer ul{
+    list-style: none;
+}
+.footer a{
+    text-decoration: none;
+    /* color: grey; */
+    font-size: 15px;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+.footer li{
+    margin-bottom: 8px;
+}
+.footer li:hover{
+    padding-left: 8px;
+    color: beige;
+    text-decoration: underline;
+}
+#email{
+    border: transparent;
+    padding: 10px 0px;
+    display: block;
+    width: 100%;
+}
+#submit{
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid;
+}
+#submit:hover{
+    background-color: #1C1C1C;
+    color: white;
+    cursor: pointer;
+
+}
+.footer img{
+    width:40px;
+    height:40px;
+}
+.footer .fa {
+    color: #1C1C1C;
+    padding: 5px;
+    margin-right: 10px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 50%;
+  }
+  .fa:hover{
+    color:white;
+    background-color: black;
+  }
+  .footer label input {
+    display: none;
+  }
+ .footer label {
+    display: inline-block;
+    padding: 15px 5px;
+    cursor: pointer;
+
+  }
+  .footer label span {
+    position: relative;
+    line-height: 22px;
+    
+  }
+  label span:before,
+label span:after {
+  content: '';
+}
+label span:before {
+    border: 1px solid #222021;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  label span:after {
+    background: #222021;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    transition: 300ms;
+    opacity: 0;
+  }
+  label input:checked+span:after {
+    opacity: 1;
+  }
+
+/* section */
+
+.sec{
+    background-color: #F8F7F6;
+    margin-bottom: 50px;
+    /* height: 100px; */
+}
+.sec>div{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+}
+.child{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    /* line-height: 35px; */
+    
+}
+.child>img{
+    width: 220px;
+    height: 400px;
+}
+.child>#img2{
+    width: 400px;
+}
+.child>button{
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.child button:hover{
+    cursor: pointer;
+    background-color: beige;
+    color: black;
+}
+
+  @media(max-width: 930px){
+    .footer-col{
+        width: 40%;
+        margin-bottom: 30px;
+    }
+    .sec>div{
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-between ;
+    }
+  }
+
+  @media(max-width: 400px){
+    .footer-col{
+        width: 100%;
+    }
+    #soical{
+        display: flex;
+        flex-wrap: wrap;
+    }
+  }

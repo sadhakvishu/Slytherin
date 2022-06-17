@@ -1,9 +1,9 @@
-let img = document.querySelector("img")
+let img = document.querySelector("#crausal img")
 // console.log(img)
 
 let imgNum = 0;
 let imgArray = [
-    "https://cdn.modesens.com/banner/20220613-modesens-SummerFashionGuide-1140x400-EN.jpg",
+    "https://cdn.modesens.com/banner/20220601kids-modesens-Sale-1140x400-K.jpg",
     "https://cdn.modesens.com/banner/20220612-modesens-TheSportsEdit-1140x400-EN.jpg",
     "https://cdn.modesens.com/banner/20220614-modesens-Monnalisa-1140x400-EN.jpg",
     "https://cdn.modesens.com/banner/20220613-modesens-AERYNE-1140x400-EN.jpg",
@@ -55,9 +55,9 @@ let p2 = para[1];
 let p3 = para[2]
 
 let imgArray2 = [
-    { link: "https://cdn.modesens.com/banner/20220612-modesens-Gucci-364x484.jpg", head: "GUCCI", para: "Father's Day Gifts" },
-    { link: "https://cdn.modesens.com/banner/20220531-modesens-Farfetch-364x484.jpg", head: "Safe is here", para: "Enjoy uo to 50%" },
-    { link: "https://cdn.modesens.com/banner/20220615Designer-Collab-modesens364x484-F.jpg", head: "Our Kind Of Dream Team", para: "Collaboration is SO in Fashion" },
+    { link: "https://cdn.modesens.com/banner/20220608-modesens-Saks-364x484-K.jpg", head: "GUCCI", para: "Father's Day Gifts" },
+    { link: "https://cdn.modesens.com/banner/20220608-modesens-Liberty-364x484-K.jpg", head: "Safe is here", para: "Enjoy uo to 50%" },
+    { link: "https://cdn.modesens.com/banner/20220608-modesens-Browns-364x484-K.jpg", head: "Our Kind Of Dream Team", para: "Collaboration is SO in Fashion" },
     { link: "https://cdn.modesens.com/banner/20220531-modesens-Sale-364x484.jpg", head: "New To Sale", para: "Fresh Cut" },
     { link: "https://cdn.modesens.com/banner/20220615-modesens-SummerFashionGuide-364x484.jpg", head: "ModeSens Fasion Guide", para: "2022 Summer Trends" },
     { link: "https://cdn.modesens.com/banner/20220609-modesens-FPillowBags-364x484-F.jpg", head: "Relieve That Slumber Party Fun", para: "Discover a pillow bag for everyday wear" },
