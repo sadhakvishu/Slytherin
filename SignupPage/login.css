@@ -166,28 +166,45 @@ p+hr{
 
 
 
-@media all and (max-width :1100px) {
-    body {
+@media all and (max-width :900px) {
+    /* body {
         background: rgb(90, 120, 128);
         background: linear-gradient(90deg, rgba(90, 120, 128, 1) 0%, rgba(94, 151, 154, 1) 0%, rgba(113, 132, 198, 1) 100%, rgba(152, 56, 190, 1) 100%, rgba(70, 45, 45, 1) 100%, rgba(108, 170, 231, 1) 100%);
-    }
+    } */
 
     #container {
-        display: block;
+        /* display: block; */
         margin: auto;
-        margin-left: 6px;
+        margin-top: 40%;
+    }
+    img{
+        height: 50%;
     }
 
     #imgbox {
         width: 100%;
+        /* visibility: hidden; */
     }
 
     #loginbox {
         width: 100%;
     }
+    .media{
+        width:400px ;
+        height: 60px;
+    }
 
     p+hr {
-        margin-left: 380px;
+        margin-left: 120px;
+    }
+    #bottom>h4:first-child {
+        margin-top: -50px;
+    }
+}
+@media all and (max-width :500px){
+    #container{
+        margin: auto;
+        margin-top: 100%;
     }
 }
 

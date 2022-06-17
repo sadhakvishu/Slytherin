@@ -1,85 +1,17 @@
-// let cartData = [
-//     {image : "https://cdn-images.farfetch-contents.com/14/73/33/06/14733306_23521938_1000.jpg",
-//     name : "MARCELO BURLON COUNTY",
-//     category : "Camouflage-print Technical Jersey Track",
-//     rate : "$144 - $546",
-//     store : "7 Store"},
-//     {image : "https://cdn.modesens.com/product/24467249_1?w=400&",
-//     name : "MARCELO BURLON COUNTY",
-//     category : "Camouflage-print Technical Jersey Track",
-//     rate : "$144 - $546",
-//     store : "7 Store"},
-//     {image : "https://cdn.modesens.com/product/31247385_7?w=400&",
-//     name : "MARCELO BURLON COUNTY",
-//     category : "Camouflage-print Technical Jersey Track",
-//     rate : "$144 - $546",
-//     store : "7 Store"},
-//     {image : "https://cdn-images.farfetch-contents.com/15/76/97/70/15769770_28843936_1000.jpg",
-//     name : "MARCELO BURLON COUNTY",
-//     category : "Camouflage-print Technical Jersey Track",
-//     rate : "$144 - $546",
-//     store : "7 Store"},
-//     {image : "https://cdn-images.farfetch-contents.com/17/61/09/10/17610910_36726635_1000.jpg",
-//     name : "MARCELO BURLON COUNTY",
-//     category : "Camouflage-print Technical Jersey Track",
-//     rate : "$144 - $546",
-//     store : "7 Store"},
-//     {image : "https://cdn.modesens.com/product/23960074_1?w=400&",
-//     name : "MARCELO BURLON COUNTY",
-//     category : "Camouflage-print Technical Jersey Track",
-//     rate : "$144 - $546",
-//     store : "7 Store"},
-//     {image : "https://res.cloudinary.com/ssenseweb/image/upload/b_white%2Cc_lpad%2Cg_center%2Ch_960%2Cw_960/c_scale%2Ch_680/f_auto%2Cdpr_1.0/211193M180004_1.jpg",
-//     name : "MARCELO BURLON COUNTY",
-//     category : "Camouflage-print Technical Jersey Track",
-//     rate : "$144 - $546",
-//     store : "7 Store"},
-//     {image : "https://cdn-images.farfetch-contents.com/14/73/33/06/14733306_23521938_1000.jpg",
-//     name : "MARCELO BURLON COUNTY",
-//     category : "Camouflage-print Technical Jersey Track",
-//     rate : "$144 - $546",
-//     store : "7 Store"},
-//     {image : "https://cdn.modesens.com/product/24467249_1?w=400&",
-//     name : "MARCELO BURLON COUNTY",
-//     category : "Camouflage-print Technical Jersey Track",
-//     rate : "$144 - $546",
-//     store : "7 Store"},
-//     {image : "https://cdn.modesens.com/product/31247385_7?w=400&",
-//     name : "MARCELO BURLON COUNTY",
-//     category : "Camouflage-print Technical Jersey Track",
-//     rate : "$144 - $546",
-//     store : "7 Store"},
-//     {image : "https://cdn-images.farfetch-contents.com/15/76/97/70/15769770_28843936_1000.jpg",
-//     name : "MARCELO BURLON COUNTY",
-//     category : "Camouflage-print Technical Jersey Track",
-//     rate : "$144 - $546",
-//     store : "7 Store"},
-//     {image : "https://cdn-images.farfetch-contents.com/17/61/09/10/17610910_36726635_1000.jpg",
-//     name : "MARCELO BURLON COUNTY",
-//     category : "Camouflage-print Technical Jersey Track",
-//     rate : "$144 - $546",
-//     store : "7 Store"},
-//     {image : "https://cdn.modesens.com/product/23960074_1?w=400&",
-//     name : "MARCELO BURLON COUNTY",
-//     category : "Camouflage-print Technical Jersey Track",
-//     rate : "$144 - $546",
-//     store : "7 Store"},
-//     {image : "https://res.cloudinary.com/ssenseweb/image/upload/b_white%2Cc_lpad%2Cg_center%2Ch_960%2Cw_960/c_scale%2Ch_680/f_auto%2Cdpr_1.0/211193M180004_1.jpg",
-//     name : "MARCELO BURLON COUNTY",
-//     category : "Camouflage-print Technical Jersey Track",
-//     rate : "$144 -",
-//     store : "7 Store"}
-// ]
 
-let cart = JSON.parse(localStorage.getItem("cartdata")) || [];
+let cart = JSON.parse(localStorage.getItem("cartPage")) || [];
 
 if(cart.length==0){
     let empty = document.createElement("div")
     empty.id = "empty-cart"
+    let img = document.createElement("img")
+    img.src = "https://careerindex.co.in/assets/images/emptycart.png"
     let text = document.createElement("h2");
     text.innerText = "Cart Is Empty"
-    empty.append(text);
-    document.querySelector("#main").append(empty)
+    empty.append(img);
+    document.querySelector("#main").append(empty);
+    document.querySelector("#coupval").innerText = "None"
+    document.querySelector("#delievery").innerText = "None"
 }else{
     DisplayCart(cart);
 }
@@ -90,8 +22,9 @@ function DisplayCart(cart){
     let totalPrice = 0;
     document.querySelector("#main").innerHTML = "";
     cart.forEach(function(e,index){
-        let count1 = e.counter;
-        totalPrice += e.rate*count1;
+        let count1 = (e.count);
+        console.log(count1)
+        totalPrice += +(e.price);
         let box = document.createElement("div");
         let box1 = document.createElement("div");
         let img = document.createElement("img");
@@ -107,7 +40,8 @@ function DisplayCart(cart){
         cbtninc.addEventListener("click", function(){
             count1++;
             count.innerText = "Qty :" + " " + count1;
-            totalPrice += e.rate*count1;
+            localStorage.setItem("countQty" , count1)
+            totalPrice += e.price*count1;
         })
         let cbtninc2 = document.createElement("button");
         cbtninc2.id = "dec";
@@ -119,6 +53,7 @@ function DisplayCart(cart){
             }
             else{
             count.innerText = "Qty :" + " " + count1;
+            localStorage.setItem("countQty" , count1)
             }
 
         })
@@ -128,7 +63,7 @@ function DisplayCart(cart){
         let category = document.createElement("p");
         category.innerText = e.category;
         let rate = document.createElement("h5");
-        rate.innerText = `MRP: ${e.rate}`;
+        rate.innerText = `MRP: $ ${e.price}`;
         let btn2 = document.createElement("button");
         btn2.innerText = "Add To WishList Again"
         let br = document.createElement("br");
@@ -141,14 +76,15 @@ function DisplayCart(cart){
         box1.append(img);
         box3.append(count,cbtninc,cbtninc2);
         box.append(box2,box3,box1);
+        box.id = "mainchild"
         document.querySelector("#main").append(box);
     })
 
-        document.querySelector("#price-value").innerText = totalPrice;
+        document.querySelector(".price-value").innerText = totalPrice;
         document.querySelector("#subtotal").innerText = totalPrice+109;
         document.querySelector("#apply").addEventListener("click", function(){
             let coupon = document.querySelector("#coupon").value;
-            if(coupon==="Masai123"){
+            if(coupon==="slytherin123"){
                 document.querySelector("#subtotal").innerText = eval(totalPrice+109-((totalPrice +109) *(15/100)))
                 document.querySelector("#coupval").innerText =`You Got 15% Dicount`
             }else{
@@ -159,7 +95,8 @@ function DisplayCart(cart){
 }
 function del(index){
     cart.splice(index,1);
-    localStorage.setItem("cartdata", JSON.stringify(cart));  
+    window.location.reload()
+    localStorage.setItem("cartPage", JSON.stringify(cart));  
     DisplayCart(cart);
 
 }

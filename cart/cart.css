@@ -1,8 +1,14 @@
+
 #main{
     width: 1550px;
     gap: 5px;
 }
-#main>div{
+#empty-cart{
+  margin: 110px;
+  margin-left: 20px;
+  text-align: center;
+}
+#mainchild{
     height: 220px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border: 1px solid rgb(207, 205, 205);
@@ -57,8 +63,11 @@ button{
     margin-top: 7px;
 }
 button:hover{
-    background-color: #ff3f6c;
+    /* background-color: #ff3f6c; */
     color: white;
+    background-color: rgb(81, 67, 67);
+    background: rgb(90,120,128);
+background: linear-gradient(90deg, rgba(90,120,128,1) 0%, rgba(50,67,73,1) 0%, rgba(113,132,198,1) 100%, rgba(152,56,190,1) 100%, rgba(70,45,45,1) 100%, rgba(108,170,231,1) 100%);
 }
 #new{
     width: 700px;
@@ -140,7 +149,7 @@ button:hover{
     margin-left: 50px;
     margin-top: -2px;
 }
-#price-value{
+.price-value{
     margin-right: 120px;
     font-size: 18px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -157,20 +166,6 @@ button:hover{
 .price>div:nth-child(3){
     margin-top: 2px;
 }
-/* #main>div>div:first-child>button:nth-child(4){
-    width: 45px;
-    background-color: rgb(207, 229, 229);
-    color: black;
-    margin-bottom: 15px;
-}
-#main>div>div:first-child>button:nth-child(5){
-    width: 45px;
-    margin-left: 50px;
-    margin-bottom: 10px;
-    background-color: rgb(207, 229, 229);
-    color: black;
-    
-} */
 #count{
     width: 140px;
     margin-top: 90px;
@@ -178,11 +173,12 @@ button:hover{
     /* border: 1px solid red; */
     text-align: center;
 }
-#price-value>p{
+.price-value>p{
     margin-top: -10px;
     font-size: 16px;
 }
 #price-summary>div:first-child>p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 13px;
 }
 .margin{
@@ -203,20 +199,43 @@ button:hover{
 #dec:hover{
     background-color: rgb(0, 0, 0);
 }
-@media all and (max-width :1120px){
-    #container{
-        display: block;
+@media all and (max-width :920px){
+    #main{
+         width: 500px;
     }
-    #new{
-        margin-left: 500px;
-        margin-top: 30px;
+    #dec{
+        margin-right: -80px;
     }
+    #main>div{
+        height: 310px;
+    }
+    h3{
+        font-size: 25px;
+    }
+    p{
+        font-size: 25px;
+    }
+    h5{
+        font-size: 20px;
+    }
+    button{
+        margin-top: 20px;
+    }
+    #price-summary{
+        width: 500px;
+        margin-right: 150px;
+    }
+    .price-value{
+        margin-right: 85px;
+        font-size: 32px;
+    }
+    /* #subtotal{
+        margin-right: 85px;
+        font-size: 32px;
+    } */
 }
 
-#empty-cart{
-    width: 300px;
-    margin: auto;
-}
+
 #empty-cart>h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
