@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE:edge">
+    <meta name="viewport" content="width:device-width, initial-scale:1.0">
+    <title>beauty page</title>
+    <style>
+        body {
+            display: flex;
+        }
+        /* filter-section */
+        #filter-section {
+            width: 300px;
+            padding: 0px 10px 0px 10px;
+        }
+        #filter-section > h4 {
+            margin-top: 250px;
+            color: grey;
+        }
+        #filter_reset {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -30px;
+        }
+        #filter_reset + div > select {
+            display: block;
+            border: none;
+            color: grey;
+        }
+        #filter_reset ~ div > button + h4 {
+            margin-left: 10px;
+        }
+        .lm {
+            margin-left: 20px;
+            line-height: 20px;
+        }
+        .lm > p {
+            color: grey;
+        }
+        #gender {
+            margin: -10px 0px 0px 10px;
+            padding-right: 200px;         
+        }
+        #condition {
+            margin: 20px 0px 20px 10px;
+            padding-right: 177px;
+        }
+        #category {
+            margin-left: 10px;
+            padding-right: 163px;
+        }
+        #filter-section button {
+            margin: 10px 0px 0px 10px;
+            padding: 10px 75px;
+            background-color: white;
+            border: 1px solid black;
+        }
+        /* items-section */
+        #items-section h1 {
+            margin-top: 100px;
+        }
+        #items-section h1 + p {
+            margin-top: -10px;
+        }
+        #box-items {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(18, auto);
+            margin-top: 70px;
+        }
+        #box-items > div {
+            border: 1px solid rgb(244, 237, 237);
+        }
+        #box-items > div > img {
+            width: 60%;
+            margin-left: 40px;
+        }
+        #box-items > div > button {
+            display: block;
+            margin: auto;
+            margin-top: -10px;
+            padding: 10px 70px;
+            background-color: white;
+            border: 1px solid black;
+            visibility: visible;
+        }
+        #box-items > div > h3 {
+            text-align: center;
+            margin-top: 0px;
+        }
+        #box-items > div > h3 + p {
+            text-align: center;
+            margin-top: -25px;
+            color: grey;
+        }
+        #box-items > div > h3 + p + p {
+            text-align: center;
+            margin-top: -10px;
+            font-weight: bold;
+        }
+        #box-items > div > h3 + p + p + p {
+            text-align: center;
+            margin-top: -10px;
+            color: grey;
+        }
+        /* search-bar */
+        #search_bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+            border: 1px solid rgb(244, 237, 237);
+        }
+        #search_bar > button {
+            padding: 10px 40px;
+            background-color: black;
+            color: white;
+        }
+        #search_bar > p {
+            font-weight: bold;
+        }
+        /* media-queries */
+        #media_queries {
+            width: 100%;
+            display: block;
+            display: flex;
+            justify-content: flex-end;
+            margin: 100px 0px -65px 10px;
+        }
+        #media_queries > div > img:nth-child(2){
+            margin: 0px 5px 0px 5px;
+        }
+        #media_queries > div + select {
+            margin-left: 20px;
+            border: none;
+        }
+        #addToCart:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="filter-section">
+        <h4>MODESENS/ SHOP/ MEN</h4>
+        <p>10,000+ ITEMS</p>
+        <form action="">
+            <div id="filter_reset">
+                <h4>Filter By:</h4>
+                <h4>Reset</h4>
+            </div>
+            <div>
+                <select name="Gender" id="gen">
+                    <option value="All">Gender: All</option>
+                    <option value="M">Men</option>
+                    <option value="W">Women</option>
+                    <option value="K">Kids</option>
+                </select>
+                <select name="Condition" id="condition">
+                    <option value="">Condition: New</option>
+                    <option value="">All</option>
+                    <option value="">New</option>
+                    <option value="">Pre-Owned</option>
+                </select>
+                <select name="Category" id="category">
+                    <option value="">Category: Beauty</option>
+                    <option value="">All</option>
+                    <option value="">Clothing</option>
+                    <option value="">Shoes</option>
+                    <option value="">Bags</option>
+                    <option value="">accessories</option>
+                    <option value="">Home</option>
+                </select>
+                <button>SAVE MY SEARCH</button>
+                <h4>My Saved Searches</h4>
+            </div>
+            <div id="for_women" class="lm">
+                <h4>Related Category Women</h4>
+                <p>Beauty Sale</p>
+                <p>Beauty</p>
+                <p>Home</p>
+                <p>Accessories</p>
+                <p>Bags</p>
+                <p>Clothing</p>
+                <p>Shoes</p>
+            </div>             
+            <div id="for_men" class="lm">
+                <h4>Related Category Men</h4>
+                <p>Grooming Sale</p>
+                <p>Grooming</p>
+                <p>Home</p>
+                <p>Accessories</p>
+                <p>Bags</p>
+                <p>Clothing</p>
+                <p>Shoes</p>
+            </div>             
+            <div id="for_kid" class="lm">
+                <h4>Related Category Kids</h4>
+                <p>Care Sale</p>
+                <p>Care</p>
+                <p>Home</p>
+                <p>Accessories</p>
+                <p>Bags</p>
+                <p>Clothing</p>
+                <p>Shoes</p>
+            </div>
+        </form>
+    </div>
+    <div id="items-section">
+        <h1>Designer Beauty</h1>
+        <p>Designer beauty with price comparison across 500+ stores in one place. Discover the latest designer beauty at ModeSens.</p>
+        <div id="media_queries">
+            <div>
+               <img src="https://cdn.modesens.com/static/img/20210908column4.svg" 
+               alt="for large">
+               <img src="https://cdn.modesens.com/static/img/20210908column3.svg" 
+               alt="for medium">
+               <img src="https://cdn.modesens.com/static/img/20210908column2.svg" 
+               alt="for small">
+            </div>
+            <select name="Best Sellers" id="best_sellers">
+                <option value="">Best Sellers</option>
+                <option value="">New Arrivals</option>
+                <option value="">Most Liked</option>
+                <option value="">Highest Price</option>
+                <option value="">Lowest Price</option>
+                <option value="">New Sale</option>
+                <option value="">Largest Discount Amount</option>
+                <option value="">Largest Discount Percentage</option>
+            </select>
+        </div>
+        <div id="box-items">
+        
+        </div>
+        <div id="search_bar">
+            <p>Like this search? Save it to your closet for future access</p>
+            <button>SAVE MY SEARCH</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+items = [
+{image:"https://cdn.modesens.com/product/6678065_76?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"- Black Rose Precious Face Oil",
+price:"260",
+store:"9 Stores",
+count:1,
+productID:1,
+gender:"M"},
+
+{image:"https://n.nordstrommedia.com/id/sr3/d2996d5b-6196-42db-b401-c7032c0b90a8.jpeg?w:780&h:838",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Soapless Gentle Foaming",
+price:"110",
+store:"9 Stores",
+count:1,
+productID:2,
+gender:"W"},
+
+{image:"https://n.nordstrommedia.com/id/sr3/d4522742-c93b-483e-b2af-ff01f1704573.jpeg?w:780&h:838",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley-paris Velvet Nourishing",
+price:"250",
+store:"9 Stores",
+count:1,
+productID:3,
+gender:"K"},
+
+{image:"https://n.nordstrommedia.com/id/sr3/464f00db-8256-4d70-895b-1b8f0e9a65f4.jpeg?w:780&h:838",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley Blush Brush, Women's In",
+price:"72",
+store:"9 Stores",
+count:1,
+productID:4,
+gender:"M"},
+
+{image:"https://n.nordstrommedia.com/id/sr3/16e61b57-b946-4b5a-bc0e-e857d593c3e6.jpeg?w:780&h:838",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley-paris Powder Brush in White",
+price:"75",
+store:"9 Stores",
+count:1,
+productID:5,
+gender:"W"},
+
+{image:"https://cdn.modesens.com/product/20609416_27?w:400&",
+button:"Add To Cart",
+name:"CHARLOTTE TILBURY",
+info:"The Air-brush Kabuki Bronzing",
+price:"42",
+store:"10 Stores",
+count:1,
+productID:6,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/6712893_50?w=400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley-paris Triple-oil Balm Make-",
+price:"132",
+store:"9 Stores",
+count:1,
+productID:7,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/6678166_58?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"5.0 Oz. Sisleya Essential Skin Care",
+price:"205",
+store:"9 Stores",
+count:1,
+productID:7,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/6291076_15?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Instant Eclat Instant Glow Primer",
+price:"100",
+store:"9 Stores",
+count:1,
+productID:9,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/6711226_43?w:400&",
+button:"Add To Cart",
+name:"SHISEIDO",
+info:"Future Solution Lx Concentrated",
+price:"146",
+store:"9 Stores",
+count:1,
+productID:10,
+gender:"K"},
+
+{image:"https://n.nordstrommedia.com/id/sr3/ec9d7940-9983-47f6-98a5-8b32cf43628e.jpeg?w:780&h:838",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley-paris Sisleya L'Integral Anti-",
+price:"168",
+store:"9 Stores",
+count:1,
+productID:11,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/6288523_25?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley-paris Eau Du Soir Perfumed",
+price:"95",
+store:"9 Stores",
+count:1,
+productID:12,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/11102878_68?w:400&",
+button:"Add To Cart",
+name:"KIEHL'S SINCE 1851",
+info:"Kiehl's Rare Earth Deep Pore Daily",
+price:"25",
+store:"10 Stores",
+count:1,
+productID:13,
+gender:"W"},
+
+{image:"https://n.nordstrommedia.com/id/sr3/01b96a01-0555-4516-b39e-9baf7bb3a8dc.jpeg?w=780&h=838",
+button:"Add To Cart",
+name:"BOBBI BROWN",
+info:"Eye Shadow Brush In White",
+price:"37",
+store:"9 Stores",
+count:1,
+productID:14,
+gender:"W"},
+
+{image:"https://n.nordstrommedia.com/id/sr3/490dda7a-0aa2-40f6-b51b-6c03e496422c.jpeg?w=780&h=838",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley-paris Phyto-blanc Le",
+price:"420",
+store:"9 Stores",
+count:1,
+productID:15,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/6718025_52?w=400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Global Perfect Pore Minimizer",
+price:"242",
+store:"9 Stores",
+count:1,
+productID:16,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/14248266_49?w:400&",
+button:"Add To Cart",
+name:"SHISEIDO",
+info:"Complete Cleansing Microfoam 6.0",
+price:"36",
+store:"9 Stores",
+count:1,
+productID:17,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/8502095_50?w=400&",
+button:"Add To Cart",
+name:"KIEHL'S SINCE 1851",
+info:"1851 Ultimate Strength Hand Salve",
+price:"29",
+store:"9 Stores",
+count:1,
+productID:18,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/21895405_11?w:400&",
+button:"Add To Cart",
+name:"BOBBI BROWN",
+info:"Vitamin Enriched Eye Base Primer",
+price:"56",
+store:"9 Stores",
+count:1,
+productID:19,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/13176593_54?w:400&",
+button:"Add To Cart",
+name:"BOBBI BROWN",
+info:"Hydrating Eye Cream, 15ml - One",
+price:"56",
+store:"9 Stores",
+count:1,
+productID:20,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/10682149_106?w:400&",
+button:"Add To Cart",
+name:"BOBBI BROWN",
+info:"Hydrating Water Fresh Cream",
+price:"64",
+store:"9 Stores",
+count:1,
+productID:21,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/11109235_11?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Eau De Campagne Moisturizing",
+price:"97",
+store:"8 Stores",
+count:1,
+productID:22,
+gender:"W"},
+
+{image:"https://n.nordstrommedia.com/id/sr3/b45000ca-a9fc-49bb-9d70-14ec4883a9f0.jpeg?w:780&h:838",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley-paris Eyeliner Brush In White",
+price:"55",
+store:"8 Stores",
+count:1,
+productID:23,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/30085901_19?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Hair Rituel The Cream 230",
+price:"105",
+store:"8 Stores",
+count:1,
+productID:24,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/12604883_57?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley-paris Hair Rituel Protective",
+price:"100",
+store:"8 Stores",
+count:1,
+productID:25,
+gender:"W"},
+
+{image:"https://cdn.modesens.com/product/12594272_48?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley-paris Sisleya L'Integral Anti-",
+price:"415",
+store:"8 Stores",
+count:1,
+productID:26,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/6687934_33?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley Cosmetics Botanical Night",
+price:"225",
+store:"8 Stores",
+count:1,
+productID:27,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/6687120_32?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Instant Perfect Perfecting Skin",
+price:"80",
+store:"8 Stores",
+count:1,
+productID:28,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/6688595_42?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Express Flower Get Mask, 2 Oz./ 60",
+price:"160",
+store:"8 Stores",
+count:1,
+productID:29,
+gender:"M"},
+
+{image:"https://n.nordstrommedia.com/id/sr3/2fe8a5db-7bcc-403a-9619-7f10be5e68f2.jpeg?w:780&h:838",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley Supremya At Night Supreme",
+price:"895",
+store:"8 Stores",
+count:1,
+productID:30,
+gender:"W"},
+
+{image:"https://cdn.modesens.com/product/6710063_42?w=400&",
+button:"Add To Cart",
+name:"SISELY PARIS",
+info:"Restorative Hand Cream, 75ml -",
+price:"110",
+store:"8 Stores",
+count:1,
+productID:31,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/6701575_42?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley-paris Foundation Brush In",
+price:"72",
+store:"8 Stores",
+count:1,
+productID:32,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/6688824_54?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Super Soin Self Tanning Hydrating",
+price:"158",
+store:"8 Stores",
+count:1,
+productID:33,
+gender:"W"},
+
+{image:"https://cdn.modesens.com/product/6688004_44?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Restorative Body Cream, 200ml -",
+price:"185",
+store:"8 Stores",
+count:1,
+productID:34,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/6701641_48?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley-paris Retractable Kabuki",
+price:"72",
+store:"8 Stores",
+count:1,
+productID:35,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/30407225_21?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley-paris Black Rose Beautiflying",
+price:"190",
+store:"9 Stores",
+count:1,
+productID:36,
+gender:"W"},
+
+{image:"https://n.nordstrommedia.com/id/sr3/25082c37-2eb5-40e9-b38e-d288f2823dc3.jpeg?w:780&h:838",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley Botanical Facial Mask With",
+price:"140",
+store:"8 Stores",
+count:1,
+productID:37,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/6718035_50?w:400&",
+button:"Add To Cart",
+name:"SHISEIDO",
+info:"Refreshing Cleansing Sheets X 30",
+price:"28",
+store:"8 Stores",
+count:1,
+productID:38,
+gender:"M"},
+
+{image:"https://www.net-a-porter.com/variants/images/22527730566092861/in/w1000.jpg",
+button:"Add To Cart",
+name:"CHARLOTTE TILBURY",
+info:"Luxury Eyeshadow Palette - Walk",
+price:"53",
+store:"8 Stores",
+count:1,
+productID:39,
+gender:"W"},
+
+{image:"https://cdn.modesens.com/product/10681758_49?w:400&",
+button:"Add To Cart",
+name:"BOBBI BROWN",
+info:"Vitamin Enriched Face Base",
+price:"64",
+store:"8 Stores",
+count:1,
+productID:40,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/6292902_82?w:400&",
+button:"Add To Cart",
+name:"BOBBI BROWN",
+info:"Smokey Eye Mascara Black 0.2 oz/",
+price:"33",
+store:"8 Stores",
+count:1,
+productID:41,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/6688893_60?w=400&",
+button:"Add To Cart",
+name:"BOBBI BROWN",
+info:"Bronzer Brush",
+price:"62",
+store:"8 Stores",
+count:1,
+productID:42,
+gender:"W"},
+
+{image:"https://cdn.modesens.com/product/6701558_52?w:400&",
+button:"Add To Cart",
+name:"BOBBI BROWN",
+info:"Eye Sweep Brush In White",
+price:"42",
+store:"8 Stores",
+count:1,
+productID:43,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/6712728_28?w:400&",
+button:"Add To Cart",
+name:"BOBBI BROWN",
+info:"Powder Brush In Multi",
+price:"70",
+store:"8 Stores",
+count:1,
+productID:44,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/6701625_79?w=400&",
+button:"Add To Cart",
+name:"BOBBI BROWN",
+info:"Angled Eye Shadow Brush In White",
+price:"37",
+store:"8 Stores",
+count:1,
+productID:45,
+gender:"W"},
+
+{image:"https://cdn.modesens.com/product/6701604_74?w:400&",
+button:"Add To Cart",
+name:"BOBBI BROWN",
+info:"Face Blender Brush In White",
+price:"62",
+store:"8 Stores",
+count:1,
+productID:46,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/6701611_47?w:400&",
+button:"Add To Cart",
+name:"BOBBI BROWN",
+info:"Eye Brow Brush In White",
+price:"32",
+store:"8 Stores",
+count:1,
+productID:47,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/7028584_22?w:400&",
+button:"Add To Cart",
+name:"KIEHL'S SINCE 1851",
+info:"Kiehls Creamy Eye Treatment With",
+price:"34",
+store:"8 Stores",
+count:1,
+productID:48,
+gender:"W"},
+
+{image:"https://cdn.modesens.com/product/19117573_18?w:400&",
+button:"Add To Cart",
+name:"KIEHL'S SINCE 1851",
+info:"0.5 Oz. Powerful Strength Line-",
+price:"57",
+store:"8 Stores",
+count:1,
+productID:49,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/6714773_64?w=400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley-paris Hair Rituel Color",
+price:"83",
+store:"8 Stores",
+count:1,
+productID:50,
+gender:"M"},
+
+{image:"https://www.net-a-porter.com/variants/images/665933304264224/in/w1000.jpg",
+button:"Add To Cart",
+name:"CHARLOTTE TILBURY",
+info:"Full Fat Lashes Mascara - Colour",
+price:"29",
+store:"8 Stores",
+count:1,
+productID:51,
+gender:"W"},
+
+{image:"https://cdn.modesens.com/product/26992945_24?w:400&",
+button:"Add To Cart",
+name:"SHISEIDO",
+info:"Exclusive Vital Perfection Intensive",
+price:"99",
+store:"8 Stores",
+count:1,
+productID:52,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/6687320_49?w:400&",
+button:"Add To Cart",
+name:"KIEHL'S SINCE 1851",
+info:"Kiehls / Creme De Corps Limited",
+price:"40",
+store:"8 Stores",
+count:1,
+productID:53,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/6678348_51?w:400&",
+button:"Add To Cart",
+name:"BOBBI BROWN",
+info:"Extra IIIuminating Moisture Balm -",
+price:"69",
+store:"8 Stores",
+count:1,
+productID:54,
+gender:"W"},
+
+{image:"https://n.nordstrommedia.com/id/sr3/f251a36e-49e5-47d5-b9d8-d9f04d25c037.jpeg?w:780&h:838",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley-paris Eyeshadow Smudge",
+price:"65",
+store:"7 Stores",
+count:1,
+productID:55,
+gender:"K"},
+
+{image:"https://n.nordstrommedia.com/id/sr3/5fea6179-bb38-4ef5-aa81-846d9f5ec3a0.jpeg?w:780&h:838",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"- Neck Cream - Enriched Formula",
+price:"205",
+store:"7 Stores",
+count:1,
+productID:56,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/6686944_69?w:400&",
+button:"Add To Cart",
+name:"KIEHL'S SINCE 1851",
+info:"1851 Dermatologist Solutions",
+price:"60",
+store:"7 Stores",
+count:1,
+productID:57,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/6688748_47?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Deeply Purifying Mask With",
+price:"140",
+store:"7 Stores",
+count:1,
+productID:58,
+gender:"W"},
+
+{image:"https://cdn.modesens.com/product/12199063_29?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisleyouth Anti-pollution",
+price:"220",
+store:"7 Stores",
+count:1,
+productID:59,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/8998413_55?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley-paris Hair Rituel Volumizing",
+price:"100",
+store:"7 Stores",
+count:1,
+productID:60,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/6712893_50?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"- Soir De Lune Perfumed Bath &",
+price:"95",
+store:"7 Stores",
+count:1,
+productID:61,
+gender:"W"},
+
+{image:"https://cdn.modesens.com/product/6718376_52?w:400&",
+button:"Add To Cart",
+name:"KIEHL'S SINCE 1851",
+info:"1851 Ginger Leaf & Hibiscus",
+price:"54",
+store:"7 Stores",
+count:1,
+productID:62,
+gender:"K"},
+
+{image:"https://n.nordstrommedia.com/id/sr3/490dda7a-0aa2-40f6-b51b-6c03e496422c.jpeg?w:780&h:838",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Radient Glow Express Mask With",
+price:"140",
+store:"7 Stores",
+count:1,
+productID:63,
+gender:"M"},
+
+{image:"https://n.nordstrommedia.com/id/sr3/01b96a01-0555-4516-b39e-9baf7bb3a8dc.jpeg?w:780&h:838",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Floral Toning Lotion Alcohol-free",
+price:"115",
+store:"7 Stores",
+count:1,
+productID:64,
+gender:"W"},
+
+{image:"https://cdn.modesens.com/product/27790603_9?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Phyto-blanc Correcting",
+price:"370",
+store:"7 Stores",
+count:1,
+productID:65,
+gender:"K"},
+
+{image:"https://cdn.modesens.com/product/13522288_37?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Unisex Velvet Sleeping Mask With",
+price:"152",
+store:"7 Stores",
+count:1,
+productID:66,
+gender:"M"},
+
+{image:"https://cdn.modesens.com/product/8502095_50?w:400&",
+button:"Add To Cart",
+name:"SISLEY PARIS",
+info:"Sisley-paris Izia Perfumed Bath",
+price:"95",
+store:"7 Stores",
+count:1,
+productID:67,
+gender:"W"},
+
+{image:"https://cdn.modesens.com/product/10301327_43?w=400&",
+button:"Add To Cart",
+name:"SHISEIDO",
+info:"Refreshing Cleansing Water 6 oz/",
+price:"38",
+store:"7 Stores",
+count:1,
+productID:68,
+gender:"K"}
+]
+
+let cartLS = JSON.parse(localStorage.getItem("cartPage")) || [];
+
+function displayProducts(items){
+    document.querySelector("#box-items").innerHTML="";
+    //items.innerHTML="";
+    items.forEach (function (ele) {
+        let box = document.createElement("div");
+
+        let itemImage = document.createElement("img");
+        itemImage.setAttribute("src", ele.image);
+
+        let itemButton = document.createElement("button");
+        itemButton.innerText = ele.button;
+        itemButton.setAttribute("id", "addToCart");
+        itemButton.addEventListener("click", function (){
+            //(cartLS.push(ele));
+            //localStorage.setItem("cartPage", JSON.stringify(cartLS));
+            //console.log(cartLS);
+            if(checkCart(ele.productID)===true){
+                cartLS.push(ele);
+                localStorage.setItem("cartPage", JSON.stringify(cartLS))
+            }else{
+                alert("Item already in Cart");
+            }
+        });
+
+        let itemName = document.createElement("h3");
+        itemName.innerText = ele.name;
+
+        let itemInfo = document.createElement("p");
+        itemInfo.innerText = ele.info;
+    
+        let itemPrice = document.createElement("p");
+        itemPrice.innerText =  `₹${ele.price}`;
+
+        let itemStore = document.createElement("p");
+        itemStore.innerText = ele.store;
+
+        box.append(itemImage,itemButton,itemName,itemInfo,itemPrice,itemStore);
+        
+        document.querySelector("#box-items").append(box);
+
+})
+}
+displayProducts(items);
+function addToCart (ele) {
+    cartLS.push(ele);
+    localStorage.setItem("cartPage", JSON.stringify(cartLS));
+    console.log(cartLS);
+}
+function checkCart (info) {
+    for(let i=0; i<cartLS.length; i++){
+        if(info===cartLS[i].productID){
+            return false;
+        }
+    }
+    return true;
+}
+let filter = document.querySelector("#gen");
+filter.addEventListener("change", function(){
+
+    if(filter.value==="All"){
+        displayProducts(items);
+    }else{
+        let filtered = items.filter(function(ele){
+            return ele.gender===filter.value;
+        })
+        console.log(filtered);
+        displayProducts(filtered);
+    }
+})
+</script>
