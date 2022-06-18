@@ -14,19 +14,19 @@ let LoginData = JSON.parse(localStorage.getItem("Login-Data")) || [];
 
 function Logindata(e){
     e.preventDefault();
-    let loginObj ={
-        email : document.querySelector("#email").value,
-        password : document.querySelector("#pwd").value,
-    }
-    data.forEach(function(e){
-        if(loginObj.email === e.email && loginObj.password=== e.password){
-            localStorage.setItem("Login-Data" , JSON.stringify(data));
+
+        let email = document.querySelector("#email").value
+        let pass = document.querySelector("#pwd").value
+        let filter=  data.filter(function(e){
+            return (email == e.email && pass == e.password);
+        })
+        if(filter.length>0){
+            localStorage.setItem("Login-Data" , JSON.stringify(filter));
             openPop()
-            
         }else{
-            alert("Wrong Credentital!")
+            alert("Wrong Credential")
         }
-    })
+        
 }
 
 
@@ -38,5 +38,5 @@ function openPop(){
 function closePop(){
     let popup = document.querySelector(".popup")
     popup.classList.remove("pop-class");
-    window.location.href = "index.html"
+    window.location.href = "../LINKING/index.html"
 }

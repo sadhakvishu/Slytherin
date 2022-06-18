@@ -61,9 +61,9 @@ function DisplayCart(cart){
         let name =  document.createElement("h3");
         name.innerText = e.name;
         let category = document.createElement("p");
-        category.innerText = e.category;
+        category.innerText = e.info;
         let rate = document.createElement("h5");
-        rate.innerText = `MRP: $ ${e.price}`;
+        rate.innerText = `MRP: ₹ ${e.price}`;
         let btn2 = document.createElement("button");
         btn2.innerText = "Add To WishList Again"
         let br = document.createElement("br");
@@ -84,7 +84,7 @@ function DisplayCart(cart){
         document.querySelector("#subtotal").innerText = totalPrice+109;
         document.querySelector("#apply").addEventListener("click", function(){
             let coupon = document.querySelector("#coupon").value;
-            if(coupon==="slytherin123"){
+            if(coupon==="slytherin"){
                 document.querySelector("#subtotal").innerText = eval(totalPrice+109-((totalPrice +109) *(15/100)))
                 document.querySelector("#coupval").innerText =`You Got 15% Dicount`
             }else{

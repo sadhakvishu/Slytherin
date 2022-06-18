@@ -1,6 +1,7 @@
 document.querySelector("form").addEventListener("submit" , SignUpData);
-
-
+document.querySelector("#crossSign").addEventListener("click", function(){
+    window.location.href = "../LINKING/index.html"
+})
 
 
 let signUpArr = JSON.parse(localStorage.getItem("SignUp-Data")) || [];
@@ -17,7 +18,7 @@ function SignUpData(e){
         window.location.href = "data.html";
     }
     else{
-        alert("Email Already Exists")
+        alert("Email Already Exists or Check Your Password Length")
     }
 }    
 
