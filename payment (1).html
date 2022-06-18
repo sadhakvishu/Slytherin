@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Form</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            font-style: inherit;
+            /* width: 80%; */
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        #container {
+            margin: auto;
+            width: 50%;
+
+        }
+
+        .row {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background-color: transparent;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -16px;
+            width: 100%;
+            /* border: 1px solid gray; */
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        #logo>img {
+            width: 300px;
+            height: 150px;
+            margin-top: 5px;
+            /* text-align: center; */
+            /* margin: auto; */
+        }
+
+        .container {
+            /* background-color: #f2f2f2; */
+            padding: 5px 20px 15px 20px;
+            border-radius: 3px;
+            width: 50%;
+
+        }
+
+        input[type=text] {
+            width: 50%;
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .icon-container {
+            margin-bottom: 15px;
+            padding: 7px 0;
+            font-size: 24px;
+        }
+
+        .icon-container>img {
+            width: 35px;
+            height: 27px;
+            gap: 20px;
+            margin-left: 15px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .btn {
+            background-color: #04AA6D;
+            color: white;
+            margin:auto;
+            border: none;
+            width: 90%;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 20px;
+            text-align:center ;
+        }
+
+        .btn hover {
+            background-color: #45a049;
+        }
+
+        .col-25 {
+            height: 400px;
+            width: 500px;
+            margin-left: 50px;
+            /* border: 1px solid gray; */
+            padding: 10px 10px;
+            background-color: transparent;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        }
+
+        span.price {
+            float: right;
+            color: gray;
+        }
+
+        a {
+            color: #04AA6D;
+        }
+
+        hr {
+            border: 1px solid lightgrey;
+        }
+
+        .pay {
+            width: 50%;
+            padding: 20px 20px;
+            /* background-color: #f2f2f2; */
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .flag {
+            display: flex;
+        }
+    </style>
+    <link rel="stylesheet" href="C:\Users\ni429\Desktop\PROJECT 2\index (1) (1).css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="logo">
+            <img src="https://play-lh.googleusercontent.com/yDvKS_44RPH8PKRUwpk9MKrkRqco4wGbIrbii0kybcmt6oW1t3t8S2gixKUPU3hOOHE"
+                alt="">
+        </div>
+        <h2>Checkout Form</h2>
+        <div class="main">
+            <div class="row">
+                <div class="container">
+                    <form action="/action_page.php">
+                        <div class="col-75">
+                            <h3>Billing Address</h3>
+                            <label for="fname"><i class="fa-user"></i>Full name</label>
+                            <input type="text" id="name" name="firstname" placeholder=""
+                                style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                            <label for="email"><i class="fa fa-envolope"></i>Email</label>
+                            <input type="text" id="email" name="email" placeholder=""
+                                style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                            <label for="addr"><i class="fa fa-adress-card-o"></i>Address</label>
+                            <input type="text" id="addr" name="address" placeholder="" k 13th stret
+                                style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                            <label for="city"><i class="fa fa-institution"></i>City</label>
+                            <input type="text" id="city" name="city" placeholder=""
+                                style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                            <div class="flag">
+                                <div>
+                                    <label for="state">State</label>
+                                    <input type="text" id="state" name="state" placeholder=""
+                                        style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                                </div>
+                                <div>
+                                    <label for="zip">zip</label>
+                                    <input type="text" id="zip" name="zip" placeholder=""
+                                        style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="pay">
+                    <h3>Payment</h3>
+                    <label for="fname">Accepted cards</label>
+                    <div class="icon-container">
+                        <img src="https://res.cloudinary.com/ssenseweb/image/upload/v1535478719/web/checkout/visa_borderless_v2.svg"
+                            alt="">
+                        <img src="https://pluspng.com/img-png/mastercard-hd-png-download-png-image-mastercard-png-1575.png"
+                            alt="">
+                        <img src="data:image/png;base64,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"
+                            alt="">
+                        <img src="data:image/jpeg;base64,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"
+                            alt="">
+                        <img src="data:image/png;base64,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"
+                            alt="">
+                    </div>
+                    <label for="cname">Name On Card</label>
+                    <input type="text" id="cname" name="cardname" placeholder=""
+                        style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                    <label for="ccnum">Credit Card Number</label>
+                    <input type="text" id="ccnum" name="card number" placeholder=""
+                        style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+
+
+                    <label for="Exp month">Exp Month</label>
+                    <input type="text" id="expmonth" name="Expmonth" placeholder=""
+                        style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                    <div class="flag">
+                        <div>
+                            <label for="expyear">Exp Year</label>
+                            <input type="text" id="expyear" name="Expyear" placeholder=""
+                                style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                        </div>
+                        <div>
+                            <label for="cvv">Cvv</label>
+                            <input type="text" id="cvv" name="cvv" placeholder=""
+                                style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <label>
+            <input type="checkbox" checked="checked" name="sameadr">shipping adress same as
+            billing
+        </label>
+        <input type="submit" value="Continue To Checkout" class="btn">
+    </div>
+</body>
+
+</html>
