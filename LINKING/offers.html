@@ -11,6 +11,7 @@
         #container{
             width:82%;
             margin:auto;
+            margin-top: 37px;
         }
     
         #container>p{
@@ -68,10 +69,11 @@
     
     #box>div{
      height:450px;
-    width:250px;
+    width:300px;
     /* border:1px solid gainsboro; */
     margin:auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
     }
     
     #box>div>img{
@@ -99,6 +101,7 @@
     }
     
     #box>div>button{
+        cursor: pointer;
         display: block;
         width:180px;
         height:40px;
@@ -141,7 +144,12 @@
         font-weight: bolder;
         padding-bottom: 10px;
     }
-    
+    body  #Sort{
+        width: 180px;
+        height: 20px;
+        margin: auto;
+        margin-top: 12px;
+    }
     
     
     </style>
@@ -1916,6 +1924,11 @@
     <input type="text" placeholder="Search store name">
     <img  src="https://cdn.modesens.com/static/img/search_keyword_icon_20180510.svg"/>
     <button>SHARE</button>
+        <select name="" id="Sort">
+            <option value="">Search By</option>
+            <option value="Asc">A to Z</option>
+            <option value="Dec">Z to A</option>
+        </select>
     </div>
 
     <div id="box">
@@ -1970,57 +1983,9 @@
         {
          image:"https://cdn.modesens.com/logo/saksoff5-logo.png?w=400&",  name:"saksoff5",  text:"Enjoy upto 60% off select styles.",date:"06/23/2022 - TBD"
         },
-        {
-         image:"https://cdn.modesens.com/merchant/the-webster-logo.jpg?w=400&",  name:"the webster",  text:"Enjoy upto 60% off select styles.",date:"06/14/2022 - TBD"
-        },
-        {
-         image:"https://cdn.modesens.com/merchant/lacoste-logo.jpg?w=400&", name:"lacoste",  text:"Enjoy upto 60% off select styles.",date:"06/14/2022 - TBD"
-        },
-        {
-         image:"https://cdn.modesens.com/merchant/ssense-logo.png?w=400&",  name:"ssense", text:"Enjoy upto 60% off select styles.",date:"06/14/2022 - TBD"
-        },
-        {
-         image:"https://cdn.modesens.com/merchant/LordTaylor.jpg?w=400&", name:"net-a-porter", text:"Enjoy upto 60% off select styles.",date:"02/08/2022 - TBD"
-        },
-        {
-         image:"https://cdn.modesens.com/merchant/neiman_marcus-1470104251?w=400&", name:"neiman marcus", text:"Enjoy upto 60% off select styles.",date:"06/25/2022 - TBD"
-        },
-        {
-         image:"https://cdn.modesens.com/merchant/farfetch-logo.jpg?w=400&", name:"farfectch", text:"Enjoy upto 60% off select styles.",date:"01/14/2022 - TBD"
-        },
-        {
-         image:"https://cdn.modesens.com/merchant/mytheresa.png?w=400&", name:"mytheresa", text:"Enjoy upto 60% off select styles.",date:"08/29/2022 - TBD"
-        },
-        {
-         image:"https://cdn.modesens.com/merchant/shopbop.png?w=400&",  name:"shopbop", text:"Enjoy upto 60% off select styles.",date:"06/14/2022 - TBD"
-        },
-        {
-         image:"https://cdn.modesens.com/merchant/oscardelarenta-logo.png?w=400&",  name:"oscardelarenta", text:"Enjoy upto 60% off select styles.",date:"05/19/2022 - TBD"
-        },
-        {
-         image:"https://cdn.modesens.com/merchant/cettire.png?w=400&",  name:"cettire", text:"Enjoy upto 60% off select styles.",date:"08/24/2022 - TBD"
-        },
-        {
-         image:"https://cdn.modesens.com/merchant/INTERMIX-1489730760?w=400&", name:"intermix",  text:"Enjoy upto 60% off select styles.",date:"12/15/2022 - TBD"
-        },
-        {
-         image:"https://cdn.modesens.com/merchant/frontgate_logo.png?w=400&",  name:"frontgate",  text:"Enjoy upto 60% off select styles.",date:"06/14/2022 - TBD"
-        },
-        {
-         image:"https://cdn.modesens.com/merchant/selfridges-1470104254?w=400&",  name:"selfridges",  text:"Enjoy upto 60% off select styles.",date:"03/07/2022 - TBD"
-        },
-        {
-         image:"https://cdn.modesens.com/merchant/macy%27s-1471663845?w=400&",  name:"macy",  text:"Enjoy upto 60% off select styles.",date:"06/10/2022 - TBD"
-        },
-        {
-         image:"https://cdn.modesens.com/merchant/Logo_Mirta.png?w=400&",  name:"mitra",  text:"Enjoy upto 60% off select styles.",date:"09/30/2022 - TBD"
-        },
-        {
-         image:"https://cdn.modesens.com/logo/saksoff5-logo.png?w=400&",  name:"saksoff5",  text:"Enjoy upto 60% off select styles.",date:"06/23/2022 - TBD"
-        },
-        {
-         image:"https://cdn.modesens.com/merchant/the-webster-logo.jpg?w=400&",  name:"the webster",  text:"Enjoy upto 60% off select styles.",date:"06/14/2022 - TBD"
-        },
+        // {
+        //  image:"https://cdn.modesens.com/merchant/the-webster-logo.jpg?w=400&",  name:"the webster",  text:"Enjoy upto 60% off select styles.",date:"06/14/2022 - TBD"
+        // },
         {
          image:"https://cdn.modesens.com/merchant/lacoste-logo.jpg?w=400&", name:"lacoste",  text:"Enjoy upto 60% off select styles.",date:"06/14/2022 - TBD"
         },
@@ -2066,52 +2031,111 @@
         {
          image:"https://cdn.modesens.com/logo/saksoff5-logo.png?w=400&",  name:"saksoff5",  text:"Enjoy upto 60% off select styles.",date:"06/23/2022 - TBD"
         },
+        // {
+        //  image:"https://cdn.modesens.com/merchant/the-webster-logo.jpg?w=400&",  name:"the webster",  text:"Enjoy upto 60% off select styles.",date:"06/14/2022 - TBD"
+        // },
         {
-         image:"https://cdn.modesens.com/merchant/the-webster-logo.jpg?w=400&",  name:"the webster",  text:"Enjoy upto 60% off select styles.",date:"06/14/2022 - TBD"
+         image:"https://cdn.modesens.com/merchant/lacoste-logo.jpg?w=400&", name:"lacoste",  text:"Enjoy upto 60% off select styles.",date:"06/14/2022 - TBD"
         },
+        {
+         image:"https://cdn.modesens.com/merchant/ssense-logo.png?w=400&",  name:"ssense", text:"Enjoy upto 60% off select styles.",date:"06/14/2022 - TBD"
+        },
+        {
+         image:"https://cdn.modesens.com/merchant/LordTaylor.jpg?w=400&", name:"net-a-porter", text:"Enjoy upto 60% off select styles.",date:"02/08/2022 - TBD"
+        },
+        {
+         image:"https://cdn.modesens.com/merchant/neiman_marcus-1470104251?w=400&", name:"neiman marcus", text:"Enjoy upto 60% off select styles.",date:"06/25/2022 - TBD"
+        },
+        {
+         image:"https://cdn.modesens.com/merchant/farfetch-logo.jpg?w=400&", name:"farfectch", text:"Enjoy upto 60% off select styles.",date:"01/14/2022 - TBD"
+        },
+        {
+         image:"https://cdn.modesens.com/merchant/mytheresa.png?w=400&", name:"mytheresa", text:"Enjoy upto 60% off select styles.",date:"08/29/2022 - TBD"
+        },
+        {
+         image:"https://cdn.modesens.com/merchant/shopbop.png?w=400&",  name:"shopbop", text:"Enjoy upto 60% off select styles.",date:"06/14/2022 - TBD"
+        },
+        {
+         image:"https://cdn.modesens.com/merchant/oscardelarenta-logo.png?w=400&",  name:"oscardelarenta", text:"Enjoy upto 60% off select styles.",date:"05/19/2022 - TBD"
+        },
+        {
+         image:"https://cdn.modesens.com/merchant/cettire.png?w=400&",  name:"cettire", text:"Enjoy upto 60% off select styles.",date:"08/24/2022 - TBD"
+        },
+        {
+         image:"https://cdn.modesens.com/merchant/INTERMIX-1489730760?w=400&", name:"intermix",  text:"Enjoy upto 60% off select styles.",date:"12/15/2022 - TBD"
+        },
+        {
+         image:"https://cdn.modesens.com/merchant/frontgate_logo.png?w=400&",  name:"frontgate",  text:"Enjoy upto 60% off select styles.",date:"06/14/2022 - TBD"
+        },
+        {
+         image:"https://cdn.modesens.com/merchant/selfridges-1470104254?w=400&",  name:"selfridges",  text:"Enjoy upto 60% off select styles.",date:"03/07/2022 - TBD"
+        },
+        {
+         image:"https://cdn.modesens.com/merchant/macy%27s-1471663845?w=400&",  name:"macy",  text:"Enjoy upto 60% off select styles.",date:"06/10/2022 - TBD"
+        },
+        {
+         image:"https://cdn.modesens.com/merchant/Logo_Mirta.png?w=400&",  name:"mitra",  text:"Enjoy upto 60% off select styles.",date:"09/30/2022 - TBD"
+        },
+        {
+         image:"https://cdn.modesens.com/logo/saksoff5-logo.png?w=400&",  name:"saksoff5",  text:"Enjoy upto 60% off select styles.",date:"06/23/2022 - TBD"
+        },
+        // {
+        //  image:"https://cdn.modesens.com/merchant/the-webster-logo.jpg?w=400&",  name:"the webster",  text:"Enjoy upto 60% off select styles.",date:"06/14/2022 - TBD"
+        // },
         {
          image:"https://cdn.modesens.com/merchant/lacoste-logo.jpg?w=400&", name:"lacoste",  text:"Enjoy upto 60% off select styles.",date:"06/14/2022 - TBD"
         },
         
         
         
-
-
     ]
-
-
-boxarr.forEach( function(ele){
-    let b=document.createElement("div");
-
-    let imag=document.createElement("img");
-    imag.setAttribute("src",ele.image);
-
-    let butt=document.createElement("button");
-    butt.innerText="SHOP NOW";
-
-    let tex=document.createElement("p");
-    tex.setAttribute("class","para");
-    tex.innerText=ele.text;
-
-    let line=document.createElement("hr");
-    line.setAttribute("width","220px")
-
-    let code=document.createElement("p");
-    code.innerText="No Code Needed";
-
-    let lastDiv=document.createElement("div");
-    lastDiv.setAttribute("id","share");
-
-    let day=document.createElement("p");
-    day.innerText=ele.date;
-
-    let shareImg=document.createElement("img");
-    shareImg.setAttribute("src","https://cdn.modesens.com/static/img/20190805Vector.svg")
-    lastDiv.append(day,shareImg);
-
-    b.append(imag,butt,tex,line,code,lastDiv);
-    document.querySelector("#box").append(b);
-    
-});
+display(boxarr)
+function display(boxarr){
+    document.querySelector("#box").innerHTML = ""
+    boxarr.forEach( function(ele){
+        
+        let b=document.createElement("div");
+        let imag=document.createElement("img");
+        imag.setAttribute("src",ele.image);
+        let butt=document.createElement("button");
+        butt.innerText="SHOP NOW";
+        let tex=document.createElement("p");
+        tex.setAttribute("class","para");
+        tex.innerText=ele.text;
+        let line=document.createElement("hr");
+        line.setAttribute("width","220px")
+        let code=document.createElement("p");
+        code.innerText="No Code Needed";
+        let lastDiv=document.createElement("div");
+        lastDiv.setAttribute("id","share");
+        let day=document.createElement("p");
+        day.innerText=ele.date;
+        let shareImg=document.createElement("img");
+        shareImg.setAttribute("src","https://cdn.modesens.com/static/img/20190805Vector.svg")
+        lastDiv.append(day,shareImg);
+        b.append(imag,butt,tex,line,code,lastDiv);
+        document.querySelector("#box").append(b);
+        
+    })
+}
+document.querySelector("#Sort").addEventListener("change" , function(){
+    let select = document.querySelector("#Sort").value;
+    if(select == "Asc"){
+            boxarr.sort(function(a,b){
+            if (a.name > b.name) return 1
+            if (a.name < b.name) return -1;
+            else return 0;
+            })
+            display(boxarr)
+        }
+    if(select == "Dec"){
+            boxarr.sort(function(a,b){
+                if (a.name > b.name) return -1
+                if (a.name < b.name) return 1;
+                else return 0;
+            })
+            display(boxarr)
+    }
+})
 </script>
 <script src="navbar.js"></script>

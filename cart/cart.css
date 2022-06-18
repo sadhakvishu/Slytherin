@@ -78,8 +78,9 @@ background: linear-gradient(90deg, rgba(90,120,128,1) 0%, rgba(50,67,73,1) 0%, r
     border-radius: 10px;
     text-align: center;
 }
-#container{
+body> #container{
     display: flex;
+    margin-top: 50px ;
 }
 
 #new>div{
