@@ -32,7 +32,7 @@ function iafunction(){
     if(LoginData.length<1){
         alert("Login first..!!")
     }else{
-        ia.href="../cart/cart.html"
+        ia.href="./cart/cart.html"
     }
 }
 

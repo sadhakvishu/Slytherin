@@ -1,5 +1,5 @@
 document.querySelector("#crossSign").addEventListener("click" , function(){
-    window.location.href = "Signup.html"
+    window.location.href = "signup.html"
 })
 
 

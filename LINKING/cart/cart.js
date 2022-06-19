@@ -87,7 +87,7 @@ function DisplayCart(cart){
             if(coupon==="slytherin"){
                 let calc = eval(totalPrice+109-((totalPrice +109) *(15/100)))
                 document.querySelector("#subtotal").innerText = calc
-                document.querySelector("#coupval").innerText =`You Got 15% Dicount`;
+                document.querySelector("#coupval").innerText =`You Got 15% Discount`;
                 localStorage.setItem("Totalprice" , calc)
             }else{
                 alert("Wrong Coupon Code");

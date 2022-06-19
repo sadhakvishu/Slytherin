@@ -1,6 +1,6 @@
 document.querySelector("form").addEventListener("submit" , SignUpData);
 document.querySelector("#crossSign").addEventListener("click", function(){
-    window.location.href = "../LINKING/index.html"
+    window.location.href = "../index.html"
 })
 
 
