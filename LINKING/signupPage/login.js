@@ -38,5 +38,5 @@ function openPop(){
 function closePop(){
     let popup = document.querySelector(".popup")
     popup.classList.remove("pop-class");
-    window.location.href = "../LINKING/index.html"
+    window.location.href = "../index.html"
 }
