@@ -85,8 +85,10 @@ function DisplayCart(cart){
         document.querySelector("#apply").addEventListener("click", function(){
             let coupon = document.querySelector("#coupon").value;
             if(coupon==="slytherin"){
-                document.querySelector("#subtotal").innerText = eval(totalPrice+109-((totalPrice +109) *(15/100)))
-                document.querySelector("#coupval").innerText =`You Got 15% Dicount`
+                let calc = eval(totalPrice+109-((totalPrice +109) *(15/100)))
+                document.querySelector("#subtotal").innerText = calc
+                document.querySelector("#coupval").innerText =`You Got 15% Dicount`;
+                localStorage.setItem("Totalprice" , calc)
             }else{
                 alert("Wrong Coupon Code");
                 document.querySelector("#price-value").innerText = totalPrice; 
@@ -100,3 +102,6 @@ function del(index){
     DisplayCart(cart);
 
 }
+// document.querySelector("#Place-order").addEventListener("click", function(){
+//     window.location.hrerf = "payment (1).html";
+// })

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <style>
+        body{
+            background:#eee;
+        }
+
+        .bgWhite{
+            border-radius: 10px;
+            height: 150px;
+            width: 400px;
+            background:rgb(240, 240, 240);
+            box-shadow:0px 3px 6px 0px #cacaca;
+        }
+
+        .title{
+            font-weight:600;
+            margin-top:20px;
+            font-size:24px;
+            text-align: center;
+        }
+
+        .customBtn{
+            cursor: pointer;
+            margin-left: 170px;
+            border-radius:0px;
+            padding:10px;
+            background-color: rgb(71, 71, 228);
+            color: white;
+            border: 0px;
+            width: 65px;
+            border-radius: 5px;
+        }
+        .customBtn:hover{
+            background-color: rgb(101, 210, 101);
+        }
+        form input{
+            display:inline-block;
+            width:50px;
+            height:50px;
+            text-align:center;
+            margin-left: 30px;
+            border-radius: 5px;
+            border: 1px solid grey;
+        }
+        .container{
+            width: 500px;
+            margin: auto;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            margin-top: 200px;
+        }
+        .popup{
+            width: 400px;
+            background: #fff;
+            border-radius: 6px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(0.1);
+            text-align: center;
+            padding: 0 30px 30px;
+            color: #333;
+            visibility: hidden;
+            transition:transform 0.4s , top 0.4s;
+        }
+        .pop-class{
+            visibility: visible;
+            top: 50%;
+            transform: translate(-50%,-50%) scale(1);
+
+        }
+        .popup img{
+            width: 100px;
+            margin-top: -50px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px;
+        }
+        .popup h2{
+            font-size: 38px;
+            font-weight: 500;
+            margin: 30px 0 10px;
+        }
+        .popup button{
+            width: 100%;
+            margin-top: 50px;
+            padding: 10px 0;
+            background-color: #6fd649;
+            color: #fff;
+            border: 0;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-4 text-center">
+              <div class="row">
+                <div class="col-sm-12 mt-5 bgWhite">
+                  <div class="title">
+                    Verify OTP
+                  </div>
+                  
+                  <form action="" class="mt-5">
+                    <input class="otp" type="text" oninput='digitValidate(this)' onkeyup='tabChange(1)' maxlength=1 >
+                    <input class="otp" type="text" oninput='digitValidate(this)' onkeyup='tabChange(2)' maxlength=1 >
+                    <input class="otp" type="text" oninput='digitValidate(this)' onkeyup='tabChange(3)' maxlength=1 >
+                    <input class="otp" type="text" oninput='digitValidate(this)'onkeyup='tabChange(4)' maxlength=1 >
+                  </form>
+                  <hr class="mt-4">
+                  <button class='btn btn-primary btn-block mt-4 mb-4 customBtn' onclick="openPop()">Verify</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="popup">
+        <img src="https://i.pinimg.com/originals/7b/dd/1b/7bdd1bc7db7fd48025d4e39a0e2f0fd8.jpg">
+        <h2>Payment Successfull</h2>
+        <button onclick="closePop()">Back To Home Page</button>
+    </div>
+</body>
+</html>
+<script>
+    let digitValidate = function(ele){
+  console.log(ele.value);
+  ele.value = ele.value.replace(/[^0-9]/g,'');
+}
+
+let tabChange = function(val){
+    let ele = document.querySelectorAll('input');
+    if(ele[val-1].value != ''){
+      ele[val].focus()
+    }else if(ele[val-1].value == ''){
+      ele[val-2].focus()
+    }   
+ }
+
+ function closePop(){
+    let popup = document.querySelector(".popup")
+    popup.classList.remove("pop-class");
+    window.location.href = "../LINKING/index.html"
+}
+
+function openPop(){
+    let popup = document.querySelector(".popup")
+    popup.classList.add("pop-class");
+}
+</script>

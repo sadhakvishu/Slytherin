@@ -2098,6 +2098,7 @@ function display(boxarr){
         let imag=document.createElement("img");
         imag.setAttribute("src",ele.image);
         let butt=document.createElement("button");
+        butt.id = "button1"
         butt.innerText="SHOP NOW";
         let tex=document.createElement("p");
         tex.setAttribute("class","para");
@@ -2136,6 +2137,9 @@ document.querySelector("#Sort").addEventListener("change" , function(){
             })
             display(boxarr)
     }
+})
+document.querySelector("#button1").addEventListener("click" , function(){
+    window.location.href = "beauty.html"
 })
 </script>
 <script src="navbar.js"></script>

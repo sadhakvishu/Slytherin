@@ -20,7 +20,7 @@
 
         #container {
             margin: auto;
-            width: 50%;
+            width: 60%;
 
         }
 
@@ -32,17 +32,25 @@
         .row {
             display: flex;
             flex-wrap: wrap;
-            margin: 0 -16px;
+            /* margin-top: -30px; */
+            /* margin: 0 -16px; */
             width: 100%;
             /* border: 1px solid gray; */
             border-radius: 5px;
             margin-bottom: 10px;
         }
-
+        #logo{
+            width: 900px;
+            margin: auto;
+        }
         #logo>img {
+
             width: 300px;
             height: 150px;
-            margin-top: 5px;
+            margin-left: 300px;
+            margin-bottom: -7px;
+            margin-top: -42px;
+            /* margin-top: ; */
             /* text-align: center; */
             /* margin: auto; */
         }
@@ -61,6 +69,20 @@
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 3px;
+        }
+        input[type=date]{
+            width: 150%;
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px; 
+        }
+        input[type=password]{
+            width: 50%;
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px; 
         }
 
         .icon-container {
@@ -82,19 +104,19 @@
         }
 
         .btn {
+            width: 900px;
             background-color: #04AA6D;
             color: white;
             margin:auto;
             border: none;
-            width: 90%;
             border-radius: 3px;
             cursor: pointer;
             font-size: 20px;
             text-align:center ;
         }
 
-        .btn hover {
-            background-color: #45a049;
+        .btn:hover {
+            background-color: #005404;
         }
 
         .col-25 {
@@ -106,6 +128,12 @@
             background-color: transparent;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
+        }
+        #main2{
+            width: 900px;
+            margin-top: -30px;
+            margin-right: 20px;
+            margin: auto; 
         }
 
         span.price {
@@ -123,17 +151,27 @@
 
         .pay {
             width: 50%;
-            padding: 20px 20px;
+            padding: 0px 20px;
             /* background-color: #f2f2f2; */
         }
 
-        .main {
+        .main {           
+            width: 900px;           
             display: flex;
+            margin-right: 20px;
+            margin: auto;
+            margin-top: -30px;
         }
 
         .flag {
             display: flex;
         }
+        #Priceshow{
+            text-align: center;
+            margin-bottom: 50px;
+            margin-top: -30px;
+        }
+
     </style>
     <link rel="stylesheet" href="C:\Users\ni429\Desktop\PROJECT 2\index (1) (1).css">
 </head>
@@ -144,7 +182,9 @@
             <img src="https://play-lh.googleusercontent.com/yDvKS_44RPH8PKRUwpk9MKrkRqco4wGbIrbii0kybcmt6oW1t3t8S2gixKUPU3hOOHE"
                 alt="">
         </div>
-        <h2>Checkout Form</h2>
+        <div id="priceCheck">
+            <h3 id="Priceshow"></h3>
+        </div>       
         <div class="main">
             <div class="row">
                 <div class="container">
@@ -152,26 +192,26 @@
                         <div class="col-75">
                             <h3>Billing Address</h3>
                             <label for="fname"><i class="fa-user"></i>Full name</label>
-                            <input type="text" id="name" name="firstname" placeholder=""
+                            <input type="text" id="name" name="firstname" placeholder="Name"
                                 style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                             <label for="email"><i class="fa fa-envolope"></i>Email</label>
-                            <input type="text" id="email" name="email" placeholder=""
+                            <input type="text" id="email" name="email" placeholder=Email"
                                 style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                             <label for="addr"><i class="fa fa-adress-card-o"></i>Address</label>
-                            <input type="text" id="addr" name="address" placeholder="" k 13th stret
+                            <input type="text" id="addr" name="address" placeholder="Address" k 13th stret
                                 style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                             <label for="city"><i class="fa fa-institution"></i>City</label>
-                            <input type="text" id="city" name="city" placeholder=""
+                            <input type="text" id="city" name="city" placeholder="City"
                                 style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                             <div class="flag">
                                 <div>
                                     <label for="state">State</label>
-                                    <input type="text" id="state" name="state" placeholder=""
+                                    <input type="text" id="state" name="state" placeholder="State"
                                         style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                                 </div>
                                 <div>
-                                    <label for="zip">zip</label>
-                                    <input type="text" id="zip" name="zip" placeholder=""
+                                    <label for="zip">Zip Code</label>
+                                    <input type="text" id="zip" name="zip" placeholder="Zip Code"
                                         style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                                 </div>
                             </div>
@@ -194,39 +234,70 @@
                             alt="">
                     </div>
                     <label for="cname">Name On Card</label>
-                    <input type="text" id="cname" name="cardname" placeholder=""
+                    <input type="text" id="cname" name="cardname" required placeholder="Enter Your Name" 
                         style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                     <label for="ccnum">Credit Card Number</label>
-                    <input type="text" id="ccnum" name="card number" placeholder=""
+                    <input type="text" id="ccnum" name="card number" placeholder="Enter Your Card Number" required
                         style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
 
 
-                    <label for="Exp month">Exp Month</label>
-                    <input type="text" id="expmonth" name="Expmonth" placeholder=""
-                        style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                        <label for="cvv">Cvv</label>
+                        <input type="password" id="cvv" name="cvv" placeholder="CVV"
+                            style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                     <div class="flag">
                         <div>
                             <label for="expyear">Exp Year</label>
-                            <input type="text" id="expyear" name="Expyear" placeholder=""
+                            <input type="date" id="expyear" name="Expyear" placeholder=""
                                 style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                         </div>
                         <div>
-                            <label for="cvv">Cvv</label>
-                            <input type="text" id="cvv" name="cvv" placeholder=""
-                                style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
-        <label>
-            <input type="checkbox" checked="checked" name="sameadr">shipping adress same as
-            billing
-        </label>
-        <input type="submit" value="Continue To Checkout" class="btn">
+        <div id="main2">
+            <label>
+                <input type="checkbox" checked="checked" name="sameadr">shipping adress same as
+                billing
+            </label>
+            <input type="submit" value="Continue To Checkout" class="btn" id="checkout">
+        </div>
     </div>
+
 </body>
 
 </html>
+<script>
+    
+    
+        let obj = {
+        "cardNo" : 123456789,
+        "cvv" : 345
+    }
+    document.querySelector("#checkout").addEventListener("click" , function1);
+    function function1(){
+        let name = document.querySelector("#cname").value;
+        let Cno = document.querySelector("#ccnum").value;
+        let Cvv = document.querySelector("#cvv").value;
+        if(+(Cno)===obj.cardNo && +(Cvv)===obj.cvv){
+            alert("OTP Sent To Registered Mobile Number")
+           window.location.href = "otp.html"
+        }else if(name==""){
+            alert("Enter Your Name")
+        }else if(Cno.length!=9){
+            alert("Card Length Should Be Nine")
+        }else if(Cvv.length!=3){
+            alert("Enter Valid CVV")
+        }else if(date==""){
+            alert("Enter Date")
+        }else{
+            alert("Wrong Credential")
+        }
+    }
+let price = localStorage.getItem("Totalprice") || 0;
+console.log(price);
+document.querySelector("#Priceshow").innerText = `You Have To Pay :- ₹${price}`;
+
+
+</script>
