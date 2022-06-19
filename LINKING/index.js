@@ -24,7 +24,17 @@ buttons[0].addEventListener("click", function () {
     }
     img.src = imgArray[imgNum]
 })
+let ia = document.getElementById("ia");
+ia.addEventListener("click",iafunction);
 
+function iafunction(){
+    let LoginData = JSON.parse(localStorage.getItem("Login-Data")) || [];
+    if(LoginData.length<1){
+        alert("Login first..!!")
+    }else{
+        ia.href="../cart/cart.html"
+    }
+}
 
 buttons[1].addEventListener("click", function () {
     if (imgNum == imgArray.length - 1) {

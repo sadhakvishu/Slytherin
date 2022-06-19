@@ -2837,6 +2837,7 @@
                 //console.log(cartLS);
                 if(checkCart(ele.productID)===true){
                     cartLS.push(ele);
+                    alert("Item added successfully");
                     localStorage.setItem("cartPage", JSON.stringify(cartLS))
                 }else{
                     alert("Item already in Cart");
